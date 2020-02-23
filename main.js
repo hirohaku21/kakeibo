@@ -25,8 +25,8 @@ const app = new Vue({
     todos:[],
     options:[
     {value:-1 ,label:'すべて'},
-    {value:0 ,label:'作業中'},
-    {value:1 ,label:'完了'}
+    {value:0 ,label:'支出'},
+    {value:1 ,label:'収入'}
     ],
     current: -1
   },
@@ -39,9 +39,11 @@ const app = new Vue({
       this.todos.push({
         id: todoStorage.uid++,
         comment: comment.value,
-        state: 0
+        state: 0,
       })
+console.log("hogehoge");
       comment.value = ''
+
     },
     doChangeState: function(item){
       item.state = item.state ? 0:1
@@ -54,18 +56,18 @@ const app = new Vue({
       var newText = window.prompt('以下の内容で更新します。');
       if(newText === ''){
         alert('入力欄が空欄です！');
-      }else if(newText !== ''){
+      }else if(newText !== null){
         this.edit(id, newText);
       }
     },
-    edit: function(id, text){
+    edit: function(id, comment){
       var editIndex = '';
       this.todos.some(function(value,index){
         if(value.id === id){
           editIndex = index;
         }
       });
-      this.list[editIndex].text = text;
+      this.todos[editIndex].comment = comment;
     }
   },
   
@@ -85,7 +87,6 @@ const app = new Vue({
   computed:{
     computedTodos: function(){
       return this.todos.filter(function(el){
-        console.log("hogehoge");
         return this.current < 0 ? true : this.current === el.state
       }, this)
     },
