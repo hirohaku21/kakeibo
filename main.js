@@ -26,23 +26,40 @@ const app = new Vue({
     options:[
     {value:-1 ,label:'すべて'},
     {value:0 ,label:'支出'},
-    {value:1 ,label:'収入'}
+    {value:1 ,label:'収入'},
+    {value:2 ,label:'日付選択'}
     ],
+    select_calender: '',
+
     current: -1
   },
   methods: {
     doAdd: function(event, value){
       var comment = this.$refs.comment
+      var amount = this.$refs.amount
+      var item = this.$refs.item
+      var detail = this.$refs.detail
+      var calender = this.$refs.calender
       if(!comment.value.length){
+        return
+      }else if(item.value == 'none'){
+        alert("項目を選択してください！")
         return
       }
       this.todos.push({
         id: todoStorage.uid++,
         comment: comment.value,
         state: 0,
+        amount: amount.value,
+        item: item.value,
+        detail: detail.value,
+        calender: calender.value
+
       })
-console.log("hogehoge");
+console.log("amount", amount);
       comment.value = ''
+      amount.value = 0
+
 
     },
     doChangeState: function(item){
@@ -87,7 +104,17 @@ console.log("hogehoge");
   computed:{
     computedTodos: function(){
       return this.todos.filter(function(el){
-        return this.current < 0 ? true : this.current === el.state
+        // return this.current < 0 ? true : this.current === el.state
+        // console.log("select_calender", this.select_calender);
+        // console.log("el.calender", el.calender);
+        // console.log("this" , this)
+        if(this.current < 0){
+          return true
+        }else if(this.current === 0 || this.current === 1){
+          return this.current === el.state
+        }else if(this.current === 2){
+          return this.select_calender === el.calender
+        }
       }, this)
     },
     labels(){

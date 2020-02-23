@@ -11,8 +11,11 @@
       <thread>
         <tr>
           <th class="id">ID</th>
+          <th class="calender"> 日付</th>
           <th class="amount">金額</th>
+          <th class="item">項目</th>
           <th class="comment">内容</th>
+          <th class="detail">内訳</th>
           <th class="state">状態</th>
           <th class="button"> - </th>
         </tr>
@@ -20,17 +23,28 @@
       <tbody>
         <tr v-for="item in computedTodos" v-bind:key="item.id"> {{ computedTodos.length }} 件を表示中
           <label v-for="label in options">
+            
             <input type="radio"
             v-model="current"
             v-bind:value="label.value">
             {{ label.label}}
+            <!-- <input v-if="label.value" type="date" ref="select_calender">  -->
+          
           </label>
+          
+          <input v-if="current == 2" type="date" v-model="select_calender"> 
+
+          
+          <!-- <div v-if="caleder"></div> -->
           <th>{{ item.id }}</th>
+          <th> {{ item.calender }} </th>
           <th> {{ item.amount }} 円　</th>
+          <th> {{ item.item }} </th>
           <td>
             {{ item.comment }}
             <button v-on:click="editTodo(item.id)"> 更新　</button>
           </td>
+          <th> {{ item.detail }} </th>
           <td class="state">
             <button v-on:click="doChangeState(item)"> {{ labels[item.state] }}</button>
           </td>
@@ -41,10 +55,22 @@
       </tbody>
     </table>
     <p>※削除ボタンはShiftキーを押しながらクリックしてください</p>
-    <h2>新しい作業</h2>
+    <h2>新規作成</h2>
     <form class="add-form" v-on:submit.prevent="doAdd">
+      <p>日付 <input type="date" ref="calender"></p>
       <p>金額　<input type="number" ref="amount"></p>
+      <p>項目 <select ref="item"> 
+        <option value="none"> 選択してください</option>
+        <option value="食費"> 食費</option>
+        <option value="日用品費"> 日用品費</option>
+        <option value="仕事費"> 仕事費</option>
+        <option value="娯楽費"> 娯楽費</option>
+        <option value="特別費"> 特別費</option>
+        <option value="習い事費"> 習い事費</option>
+        <option value="その他"> その他</option>
+      </select></p>
       <p>内容　<input type="text" ref="comment"></p>
+      <p>内訳 <input type="text" ref="detail"></p>
 
       <button type="submit">追加</button>
     </form>
