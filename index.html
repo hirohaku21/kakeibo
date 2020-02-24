@@ -4,46 +4,59 @@
   <meta charset="utf-8">
   <title>Vue.js App</title>
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
 </head>
 <body>
   <div id="app">
     <table>
-      <thread>
+      <thead>
         <tr>
           <th class="id">ID</th>
           <th class="calender"> 日付</th>
-          <th class="amount">金額</th>
           <th class="item">項目</th>
+          <th class="amount">金額</th>
           <th class="comment">内容</th>
+          <th class="re">内容変更</th>
           <th class="detail">内訳</th>
           <th class="state">状態</th>
-          <th class="button"> - </th>
+          <th class="button"> 操作 </th>
         </tr>
-      </thread>
+      </thead>
       <tbody>
         <tr v-for="item in computedTodos" v-bind:key="item.id"> {{ computedTodos.length }} 件を表示中
           <label v-for="label in options">
-            
+
             <input type="radio"
             v-model="current"
             v-bind:value="label.value">
             {{ label.label}}
-            <!-- <input v-if="label.value" type="date" ref="select_calender">  -->
-          
-          </label>
-          
-          <input v-if="current == 2" type="date" v-model="select_calender"> 
 
+          </label>
+          <input v-if="current == 2" v-model="select_calender" type="date" id="flatpickr_calender">
           
-          <!-- <div v-if="caleder"></div> -->
+          <select v-if="current == 3" v-model="select_item" >
+            <option value="none"> 選択してください</option>
+            <option value="食費"> 食費</option>
+            <option value="日用品費"> 日用品費</option>
+            <option value="仕事費"> 仕事費</option>
+            <option value="娯楽費"> 娯楽費</option>
+            <option value="特別費"> 特別費</option>
+            <option value="習い事費"> 習い事費</option>
+            <option value="その他"> その他</option>
+          </select>
+          
           <th>{{ item.id }}</th>
           <th> {{ item.calender }} </th>
-          <th> {{ item.amount }} 円　</th>
           <th> {{ item.item }} </th>
-          <td>
-            {{ item.comment }}
-            <button v-on:click="editTodo(item.id)"> 更新　</button>
+          <th> {{ item.amount }} 円　</th>
+          <td class="comment">
+            {{ item.comment }} 
           </td>
+          <th class="re">
+            <button v-on:click="editTodo(item.id)">更新</button>
+          </th>
+
+
           <th> {{ item.detail }} </th>
           <td class="state">
             <button v-on:click="doChangeState(item)"> {{ labels[item.state] }}</button>
@@ -57,21 +70,44 @@
     <p>※削除ボタンはShiftキーを押しながらクリックしてください</p>
     <h2>新規作成</h2>
     <form class="add-form" v-on:submit.prevent="doAdd">
-      <p>日付 <input type="date" ref="calender"></p>
-      <p>金額　<input type="number" ref="amount"></p>
-      <p>項目 <select ref="item"> 
-        <option value="none"> 選択してください</option>
-        <option value="食費"> 食費</option>
-        <option value="日用品費"> 日用品費</option>
-        <option value="仕事費"> 仕事費</option>
-        <option value="娯楽費"> 娯楽費</option>
-        <option value="特別費"> 特別費</option>
-        <option value="習い事費"> 習い事費</option>
-        <option value="その他"> その他</option>
-      </select></p>
-      <p>内容　<input type="text" ref="comment"></p>
-      <p>内訳 <input type="text" ref="detail"></p>
+      <div class="calender_date">
+        <label>日付</label>
+        <input type="date" ref="calender" id="flatpickr_calender">
+      </div>
+      
+      <div class="select-wrap">
+        <label>項目</label>
+        <select ref="item"> 
+          <option value="none"> 選択してください</option>
+          <option value="食費"> 食費</option>
+          <option value="日用品費"> 日用品費</option>
+          <option value="仕事費"> 仕事費</option>
+          <option value="娯楽費"> 娯楽費</option>
+          <option value="特別費"> 特別費</option>
+          <option value="習い事費"> 習い事費</option>
+          <option value="その他"> その他</option>
+        </select>
+      </div>
+      <br>
+      <div class="cp_iptxt">
+        <input type="number" ref="amount" class="ef" placeholder="金額を入力してください">
+        <label>金額</label>
+        <span class="focus_bg"></span>
+      </div>
 
+      <br>
+      <div class="cp_iptxt">
+        <input type="text" ref="comment" class="ef" placeholder="内容を入力してください">
+        <label>内容</label>
+        <span class="focus_bg"></span>
+      </div>
+      <br>
+      <div class="cp_iptxt">
+        <input type="text" ref="detail" class="ef" placeholder="内訳を入力してください">
+        <label>内訳</label>
+        <span class="focus_bg"></span>
+      </div>
+      <br>
       <button type="submit">追加</button>
     </form>
 
@@ -79,5 +115,13 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+  <script>
+    flatpickr.localize(flatpickr.l10ns.ja);
+    flatpickr('#flatpickr_calender',{
+      allowInput: true
+    });
+  </script>
 </body>
 </html>

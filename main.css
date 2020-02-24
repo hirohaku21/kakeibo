@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 #app {
-  max-width: 640px;
+  max-width: 1040px;
   margin: 0 auto;
 }
 table {
@@ -13,21 +13,45 @@ thead th {
   border-bottom: 2px solid #0099e4; /*#d31c4a */
   color: #0099e4;
 }
-th,
+/*th,*/
 th {
-  padding: 0 8px;
+  padding: 0.8px;
   line-height: 40px;
 }
 thead th.id {
   width: 50px;
+  text-align: center;
 }
-thead th.state {
+thead th.calender {
+  width: 120px;
+  text-align: center;
+}
+thead th.amount {
+  width: 110px;
+  text-align: center;
+}
+thead th.item {
   width: 100px;
+  text-align: center;
 }
-thead th.button {
+thead th.comment, thead th.detail{
+  width: 240px;
+  text-align: center;
+}
+thead th.re{
+  width: 80px;
+  text-align: center;
+}
+thead th.state{
+  width: 100px;
+  text-align: center;
+}
+thead th.button/*,tbody td.comment*/ {
   width: 60px;
+  text-align: center;
 }
-tbody td.button, tbody td.state {
+
+tbody td.button, tbody td.state, tbody td.comment {
   text-align: center;
 }
 tbody tr td,
@@ -48,8 +72,114 @@ button {
   border: none;
   border-radius: 20px;
   line-height: 24px;
-  padding: 0 8px;
+  /*padding: 0 8px;*/
   background: #0099e4;
   color: #fff;
   cursor: pointer;
+  font-size: 15px;
+}
+
+
+.select-wrap , .calender_date{
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  font: sans-serif;
+}
+
+.select-wrap select, .calender_date input{
+  width: 100%;
+  outline:none;
+  appearance: none;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid #1b2538;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.select-wrap select::-ms-expand {
+  display: none;
+}
+
+
+.cp_iptxt {
+  position: relative;
+  width: 80%;
+  /*margin: 40px 3%;*/
+}
+.cp_iptxt input {
+  font: 15px/24px sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  letter-spacing: 1px;
+  padding-left: 4em;
+  border-radius: 5px;
+}
+.cp_iptxt input:focus {
+  outline: none;
+}
+.ef {
+  position: relative;
+  padding: 7px 15px;
+  border: 0;
+  border: 1px solid #1b2538;
+  background: transparent;
+}
+.ef ~ .focus_bg:before,
+.ef ~ .focus_bg:after {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  content: '';
+  transition: 0.3s;
+  background-color: rgba(218,60,65,.3);
+}
+.ef:focus {
+  border: 1px solid #da3c41;
+}
+.ef:focus ~ .focus_bg:before,
+.cp_iptxt.ef ~ .focus_bg:before {
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  transition: 0.3s;
+}
+.ef ~ .focus_bg:after {
+  top: auto;
+  right: 50%;
+  bottom: 50%;
+  left: auto;
+}
+.ef:focus ~ .focus_bg:after,
+.cp_iptxt.ef ~ .focus_bg:after {
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  transition: 0.3s;
+}
+.ef ~ label {
+  position: absolute;
+  z-index: -1;
+  top: 10px;
+  left: 14px;
+  width: 100%;
+  transition: 0.3s;
+  letter-spacing: 0.5px;
+  color: #aaaaaa;
+}
+.ef:focus ~ label, .cp_iptxt.ef ~ label {
+  font-size: 15px;
+  top: -18px;
+  left: 0;
+  transition: 0.3s;
+  color: #da3c41;
 }

@@ -27,9 +27,11 @@ const app = new Vue({
     {value:-1 ,label:'すべて'},
     {value:0 ,label:'支出'},
     {value:1 ,label:'収入'},
-    {value:2 ,label:'日付選択'}
+    {value:2 ,label:'日付選択'},
+    {value:3, label:'項目選択'}
     ],
     select_calender: '',
+    select_item: '',
 
     current: -1
   },
@@ -40,10 +42,20 @@ const app = new Vue({
       var item = this.$refs.item
       var detail = this.$refs.detail
       var calender = this.$refs.calender
-      if(!comment.value.length){
+      if(!calender.value.length){
+        alert("日付を入力してください！")
         return
-      }else if(item.value == 'none'){
+      }else if(item.value === 'none'){
         alert("項目を選択してください！")
+        return
+      }else if(!amount.value.length){
+        alert("金額を入力してください！")
+        return
+      }else if(!comment.value.length){
+        alert("内容を入力してください！")
+        return
+      }else if(!detail.value.length){
+        alert("内訳を入力してください！")
         return
       }
       this.todos.push({
@@ -114,6 +126,8 @@ console.log("amount", amount);
           return this.current === el.state
         }else if(this.current === 2){
           return this.select_calender === el.calender
+        }else if(this.current === 3){
+          return this.select_item === el.item
         }
       }, this)
     },
