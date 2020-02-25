@@ -1,10 +1,13 @@
 # vue.jsを用いた家計簿アプリ
 
-# Name hirohaku21/kakeibo
+## Name hirohaku21/kakeibo
 
-## ![動作はこちらから](https://hirohaku21.github.io/kakeibo/)
-※GoogleChromeからアクセスしてください
-リロードせず投稿時に即時反映される家計簿です。
+ ![動作はこちらから](https://hirohaku21.github.io/kakeibo/)  
+
+※GoogleChromeからアクセスしてください  
+
+リロードせず投稿時に即時反映される家計簿です。  
+
 
 # DEMO
 
@@ -18,33 +21,36 @@
 
 # Requirement
 
-*Desktop版 GoogleChrome*　バージョン: 79.0.3945.130（Official Build） （64 ビット）
+**Desktop版 GoogleChrome**　バージョン: 79.0.3945.130（Official Build） （64 ビット）
 
 # Installation
 
-下記よりDesktop版のGoogleChromeのダウンロードをしてください。
+下記よりDesktop版のGoogleChromeのダウンロードをしてください。  
+
 https://www.google.com/chrome/
 
 
 # Note
 
-注意点などがあれば書く
+内容が更新されていきます。適時、コミット履歴よりご確認ください
 
 # Author
 
 作成情報を列挙する
 
-* 作成者　hihrohaku21
-* 連絡方法　https://github.com/hirohaku21/kakeibo/issues  
+- 作成者　hihrohaku21
+- 連絡方法　
+- 問題点や指摘　https://github.com/hirohaku21/kakeibo/issues  
+
 
 # License
 ライセンスを明示する
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-  <img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+<p xmlns:dct="http://purl.org/dc/terms/">
+<a rel="license" href="http://creativecommons.org/publicdomain/mark/1.0/">
+<img src="https://licensebuttons.net/p/mark/1.0/88x31.png"
+     style="border-style: none;" alt="Public Domain Mark" />
 </a>
 <br />
-この 作品 は 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス
-</a>
-の下に提供されています。
+この作品（<a href="https://github.com/hirohaku21" rel="dct:creator"><span property="dct:title">hirohaku21</span></a>)による<span property="dct:title">家計簿アプリ</span>として <span resource="[_:publisher]" rel="dct:publisher"><span property="dct:title" href="mailto:tide687272+github@yahoo.co.jp">Toshihiro Uetsuki</span></span>によって特定されています）は著作権法上の制約が知られている限り存在していません。
+</p>
