@@ -1,8 +1,9 @@
 # vue.jsを用いた家計簿アプリ
 
 ## hirohaku21/kakeibo
-
+↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  
 [動作はこちらから](https://hirohaku21.github.io/kakeibo/)  
+↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑  
 
 ※GoogleChromeからアクセスしてください  
 
@@ -66,7 +67,6 @@ https://www.google.com/chrome/
 作成情報を列挙する
 
 - 作成者　hihrohaku21
-- 連絡方法　
 - 問題点や指摘　https://github.com/hirohaku21/kakeibo/issues  
 
 
