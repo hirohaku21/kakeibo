@@ -1,8 +1,8 @@
 # vue.jsを用いた家計簿アプリ
 
-## Name hirohaku21/kakeibo
+## hirohaku21/kakeibo
 
- ![動作はこちらから](https://hirohaku21.github.io/kakeibo/)  
+![動作はこちらから](https://hirohaku21.github.io/kakeibo/)  
 
 ※GoogleChromeからアクセスしてください  
 
@@ -47,10 +47,28 @@ https://www.google.com/chrome/
 ライセンスを明示する
 
 <p xmlns:dct="http://purl.org/dc/terms/">
-<a rel="license" href="http://creativecommons.org/publicdomain/mark/1.0/">
-<img src="https://licensebuttons.net/p/mark/1.0/88x31.png"
-     style="border-style: none;" alt="Public Domain Mark" />
-</a>
-<br />
-この作品（<a href="https://github.com/hirohaku21" rel="dct:creator"><span property="dct:title">hirohaku21</span></a>)による<span property="dct:title">家計簿アプリ</span>として <span resource="[_:publisher]" rel="dct:publisher"><span property="dct:title" href="mailto:tide687272+github@yahoo.co.jp">Toshihiro Uetsuki</span></span>によって特定されています）は著作権法上の制約が知られている限り存在していません。
+  <a rel="license" href="http://creativecommons.org/publicdomain/mark/1.0/">
+    <img src="https://licensebuttons.net/p/mark/1.0/88x31.png"
+    style="border-style: none;" alt="Public Domain Mark" />
+  </a>
+  <br />
+  この作品（
+  <a href="https://github.com/hirohaku21" rel="dct:creator">
+    <span property="dct:title">
+      hirohaku21
+    </span>
+  </a>
+  )による
+  <span property="dct:title">
+    家計簿アプリ
+  </span>
+  として 
+  <a href="mailto:tide687272+github@yahoo.co.jp">
+  <span resource="[_:publisher]" rel="dct:publisher">
+    <span property="dct:title">
+      Toshihiro Uetsuki
+    </span>
+  </span>
+  </a>
+  によって特定されています）は著作権法上の制約が知られている限り存在していません。
 </p>
