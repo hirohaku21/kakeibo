@@ -2,7 +2,7 @@
 
 ## hirohaku21/kakeibo
 
-![動作はこちらから](https://hirohaku21.github.io/kakeibo/)  
+[動作はこちらから](https://hirohaku21.github.io/kakeibo/)  
 
 ※GoogleChromeからアクセスしてください  
 
@@ -63,7 +63,7 @@ https://www.google.com/chrome/
     家計簿アプリ
   </span>
   として 
-  <a href="mailto:tide687272+github@yahoo.co.jp">
+  <a href="mailto:hirohaku0201-inquiry@yahoo.co.jp">
   <span resource="[_:publisher]" rel="dct:publisher">
     <span property="dct:title">
       Toshihiro Uetsuki
