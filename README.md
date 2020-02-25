@@ -2,40 +2,29 @@
 
 # Name hirohaku21/kakeibo
 
+## ![動作はこちらから](https://hirohaku21.github.io/kakeibo/)
+※GoogleChromeからアクセスしてください
 リロードせず投稿時に即時反映される家計簿です。
 
 # DEMO
 
-"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
+下記のgifを参照してください。
 
+![demo](https://raw.githubusercontent.com/wiki/hirohaku21/kakeibo/demo.gif)
 # Features
 
-"hoge"のセールスポイントや差別化などを説明する
+- 新規投稿された内容に対して、即時反映されます。
+- 作成された日付、項目、金額、内容、内訳は保存されます。
 
 # Requirement
 
-"hoge"を動かすのに必要なライブラリなどを列挙する
-
-* huga 3.5.2
-* hogehuga 1.0.2
+*Desktop版 GoogleChrome*　バージョン: 79.0.3945.130（Official Build） （64 ビット）
 
 # Installation
 
-Requirementで列挙したライブラリなどのインストール方法を説明する
+下記よりDesktop版のGoogleChromeのダウンロードをしてください。
+https://www.google.com/chrome/
 
-```bash
-pip install huga_package
-```
-
-# Usage
-
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
-
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
-```
 
 # Note
 
@@ -45,15 +34,17 @@ python demo.py
 
 作成情報を列挙する
 
-* 作成者
-* 所属
-* E-mail
+* 作成者　hihrohaku21
+* 連絡方法　https://github.com/hirohaku21/kakeibo/issues  
 
 # License
 ライセンスを明示する
 
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
-
-社内向けなら社外秘であることを明示してる
-
-"hoge" is Confidential.
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+</a>
+<br />
+この 作品 は 
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス
+</a>
+の下に提供されています。
