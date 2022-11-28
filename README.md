@@ -90,10 +90,10 @@ https://www.google.com/chrome/
     家計簿アプリ
   </span>
   として 
-  <a href="mailto:hirohaku0201-inquiry@yahoo.co.jp">
+  <a href="mailto:tide687272@yahoo.co.jp">
   <span resource="[_:publisher]" rel="dct:publisher">
     <span property="dct:title">
-      Toshihiro Uetsuki
+      hirohaku21
     </span>
   </span>
   </a>
